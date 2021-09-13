@@ -1,0 +1,38 @@
+<h1>Upload Files</h1>
+<%= form_tag('/upload_files', method: :post, multipart: true) do  %>
+  <%= label_tag 'teams' %>
+  <br>
+  <%= file_field_tag 'teams' %>
+  <br>
+  <br>
+  <br>
+  <%= label_tag 'batting' %>
+  <br>
+  <%= file_field_tag 'batting' %>
+  <br>
+  <br>
+  <br>
+  <%= submit_tag 'Load Data' %>
+<% end %>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">playerID</th>
+    <th scope="col">yearId</th>
+    <th scope="col">Team name(s)</th>
+    <th scope="col">Batting Average</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @battings.each do |batting| %>
+    <tr>
+      <td><%= batting.player_id %></td>
+      <td><%= batting.year_id %></td>
+      <td><%= batting.team&.name %></td>
+      <td><%= batting.batting_average || 'n/a' %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

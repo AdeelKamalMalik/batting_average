@@ -1,0 +1,112 @@
+<%= form_with(model: team) do |form| %>
+  <% if team.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(team.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+      <ul>
+        <% team.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :year_id %>
+    <%= form.text_field :year_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lg_id %>
+    <%= form.text_field :lg_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :team_id %>
+    <%= form.text_field :team_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :franch_id %>
+    <%= form.text_field :franch_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :div_id %>
+    <%= form.text_field :div_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rank %>
+    <%= form.text_field :rank %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ghome %>
+    <%= form.text_field :ghome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :div_win %>
+    <%= form.text_field :div_win %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wc_win %>
+    <%= form.text_field :wc_win %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lg_win %>
+    <%= form.text_field :lg_win %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ws_wing %>
+    <%= form.text_field :ws_wing %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :park %>
+    <%= form.text_field :park %>
+  </div>
+
+  <div class="field">
+    <%= form.label :attendance %>
+    <%= form.text_field :attendance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bpf %>
+    <%= form.text_field :bpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ppf %>
+    <%= form.text_field :ppf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :team_idrb %>
+    <%= form.text_field :team_idrb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :team_i_dlahman45 %>
+    <%= form.text_field :team_i_dlahman45 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :team_i_dretro %>
+    <%= form.text_field :team_i_dretro %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

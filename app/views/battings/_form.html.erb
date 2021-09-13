@@ -1,0 +1,127 @@
+<%= form_with(model: batting) do |form| %>
+  <% if batting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(batting.errors.count, "error") %> prohibited this batting from being saved:</h2>
+
+      <ul>
+        <% batting.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :player_id %>
+    <%= form.text_field :player_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year_id %>
+    <%= form.text_field :year_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stint %>
+    <%= form.number_field :stint %>
+  </div>
+
+  <div class="field">
+    <%= form.label :team_id %>
+    <%= form.text_field :team_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lg_id %>
+    <%= form.text_field :lg_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :g %>
+    <%= form.text_field :g %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ab %>
+    <%= form.text_field :ab %>
+  </div>
+
+  <div class="field">
+    <%= form.label :r %>
+    <%= form.text_field :r %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h %>
+    <%= form.text_field :h %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2b %>
+    <%= form.text_field :2b %>
+  </div>
+
+  <div class="field">
+    <%= form.label :3b %>
+    <%= form.text_field :3b %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hr %>
+    <%= form.text_field :hr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rbi %>
+    <%= form.text_field :rbi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sb %>
+    <%= form.text_field :sb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cs %>
+    <%= form.text_field :cs %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bb %>
+    <%= form.text_field :bb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :so %>
+    <%= form.text_field :so %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ibb %>
+    <%= form.text_field :ibb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hbp %>
+    <%= form.text_field :hbp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sh %>
+    <%= form.text_field :sh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sf %>
+    <%= form.text_field :sf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gidp %>
+    <%= form.text_field :gidp %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

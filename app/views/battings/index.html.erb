@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Battings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Year</th>
+      <th>Stint</th>
+      <th>Team</th>
+      <th>Lg</th>
+      <th>G</th>
+      <th>Ab</th>
+      <th>R</th>
+      <th>H</th>
+      <th>2b</th>
+      <th>3b</th>
+      <th>Hr</th>
+      <th>Rbi</th>
+      <th>Sb</th>
+      <th>Cs</th>
+      <th>Bb</th>
+      <th>So</th>
+      <th>Ibb</th>
+      <th>Hbp</th>
+      <th>Sh</th>
+      <th>Sf</th>
+      <th>Gidp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @battings.each do |batting| %>
+      <tr>
+        <td><%= batting.player_id %></td>
+        <td><%= batting.year_id %></td>
+        <td><%= batting.stint %></td>
+        <td><%= batting.team_id %></td>
+        <td><%= batting.lg_id %></td>
+        <td><%= batting.g %></td>
+        <td><%= batting.ab %></td>
+        <td><%= batting.r %></td>
+        <td><%= batting.h %></td>
+        <td><%= batting.2b %></td>
+        <td><%= batting.3b %></td>
+        <td><%= batting.hr %></td>
+        <td><%= batting.rbi %></td>
+        <td><%= batting.sb %></td>
+        <td><%= batting.cs %></td>
+        <td><%= batting.bb %></td>
+        <td><%= batting.so %></td>
+        <td><%= batting.ibb %></td>
+        <td><%= batting.hbp %></td>
+        <td><%= batting.sh %></td>
+        <td><%= batting.sf %></td>
+        <td><%= batting.gidp %></td>
+        <td><%= link_to 'Show', batting %></td>
+        <td><%= link_to 'Edit', edit_batting_path(batting) %></td>
+        <td><%= link_to 'Destroy', batting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Batting', new_batting_path %>
