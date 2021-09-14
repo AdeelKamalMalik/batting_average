@@ -10,7 +10,7 @@ class HomeController < ApplicationController
     AddTeamsJob.perform_later(teams.path)
     batting = File.open(params[:batting])
     AddBattingJob.perform_later(batting.path)
-    flash[:success] = "it will take 2 minutes some time to generate the data"
+    flash[:success] = "it will take some time to generate the data"
     redirect_to root_path
   end
 end

@@ -14,8 +14,18 @@ $ ruby -v
 ruby 3.0.0
 $ gem install bundler
 $ bundle install
-$ rake batting:load_data # it may take sometime to load data
-$  rake batting:get_average # it will show the average per year
+$ rails db:create
+$ rails db:migrate
 ```
+- To run with command line
+```bigquery
+$ rake batting:load_data # it may take sometime to load data
+$ rake batting:get_average # it will show the average per year
+```
+- to run on Web interface
+```bigquery
+$ rails server
+```
+http://localhost:3000/ to run the project on web browser
 
 
